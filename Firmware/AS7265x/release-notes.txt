@@ -1,0 +1,511 @@
+ams Software Release Notes (www.ams.com)
+-------------------------------------------------------------------------------
+
+Overview
+
+        This document lists all user-visible changes to the firmware.
+
+*******************************************************************************
+Version: 11.0.0
+*******************************************************************************
+
+Supported Platforms
+
+        AS7210 Smart Lighting Manager
+        AS7211 Smart Lighting Manager
+        AS7220 Smart Lighting Manager
+        AS7221 Smart Lighting Manager
+        AS7225 Smart Lighting Director
+        AS7261 Spectral Sensing
+        AS7262 Spectral Sensing
+        AS7263 Spectral Sensing
+        AS7265 Spectral Sensing
+
+
+Features
+
+        * added support for AS7210/11/20/25
+
+        * added ID comparison for AS7261/62/63
+
+
+Changes
+
+        * changed ATRAMP command to handle percent values between 1s - 10s
+
+        * changed internal daylight algorithm
+
+        * AS7265: swap INT and SLV_RST1 pin on default 
+          (dynamic configuration: can be withdrawn with special configuration)
+
+        * changed I2C register for current LUX and CCT values to 16bit
+
+        * changed calibration parameters for XYZ sensors, 
+          removed access to diffuser and default scalars
+
+
+Fixes
+
+        * AS7265: fixed raw data measurement on higher integration times
+
+        * ATBLINK: fixed priority errors for ATLIGHT=0
+
+        * AS7265: fixed read/write of calibration values
+
+
+Known issues & limitations
+
+        * The accuracy of the internal timer is under examination
+
+        * AS7225: controller for 2 channels do not work,
+          other functions are under test
+
+*******************************************************************************
+Version: 10.0.0
+*******************************************************************************
+
+Supported Platforms
+
+        AS7221 Smart Lighting Manager
+        AS7261 Spectral Sensing
+        AS7262 Spectral Sensing
+        AS7263 Spectral Sensing
+        AS7265 Spectral Sensing
+
+
+Features
+
+        * added support for AS7262, AS7263 and AS7265
+
+        * added saturation detection for lower integration times
+
+        * added function ATSCL to set/get calibration data
+
+        * added ATPWMFREQ to set application specific PWM frequency
+
+        * support synchronization for default PWM frequency 886 Hz
+
+        * increased PWM resolution
+
+        * ATRAMP now supports special mode 255 for smooth ramping
+        
+        * added feature to handle normalized gain and integration time 
+          for user specific calibration
+
+
+Changes
+
+        * changed I2C version register to support 16bit version numbers
+
+        * flipped I2C high/low firmware byte count register to MSB
+
+        * added I2C factory reset
+
+        * added second parameter to ATBURST command to support calibrated data
+
+        * ATLUXC and ATCCTC now return 0 on error
+
+        * switched bank modes 0 and 1 for AS7261/AS7221
+        
+        * AS7221: persistent data handling now comes as an opt-in feature and 
+          has to be enabled manually through ATPERSMEM
+
+
+Fixes
+
+        n/a
+
+
+Known issues & limitations
+
+        * The accuracy of the internal timer is under examination
+
+*******************************************************************************
+Version: 9.2.0
+*******************************************************************************
+
+Supported Platforms
+
+        AS7221 Smart Lighting Manager
+        AS7261 Spectral Sensing (only for internal testing purposes)
+
+
+Features
+
+        n/a
+
+
+Changes
+
+        * Changed valid values for ATLED0 & ATLED1: 1 to enable (used to be 100), 0 to disable
+
+        * ATLOG command resets the PWM1 output to the right mode
+
+        * I2C interface: register 0x54 is now I2CS_REGS_COEFF_READ 
+          and 0x55 is I2CS_REGS_COEFF_WRITE
+
+        * Changed default calibration matrix to an identity matrix
+        
+        * Changed default IR scalars to 0.0
+
+
+Fixes
+
+        * If a higher priority output was enabled, a lower priority output
+          couldn't be set in background
+
+        * calibration values couldn't read from internal fuses, 
+          so default firmware calibration values were used instead
+
+
+Known issues & limitations
+
+        * The accuracy of the internal timer is under examination
+
+*******************************************************************************
+Version: 9.1.0
+*******************************************************************************
+
+Supported Platforms
+
+        AS7221 Smart Lighting Manager
+        AS7261 Spectral Sensing
+
+
+Features
+
+        * First release for AS7261 for testing purposes
+
+
+Changes
+
+        * Default gain changed from 4 to 3.7
+
+        * PWM1 is only configured as PWM in MODE 1
+
+        * In MODE 2, PWM1 can only be set via ATPWM1 or ATXPWM1
+
+
+Fixes
+
+        * Some fixes to the I2C master library regarding timeout handling
+
+        * From now on ramp time gets saved permanently
+
+        * MODE 1 detection is fixed
+
+
+Known issues & limitations
+
+        * The accuracy of the internal timer is under examination
+
+        * Color measurement is not fully tested yet
+
+*******************************************************************************
+Version: 9.0.0
+*******************************************************************************
+
+Supported Platforms
+
+        AS7221 Smart Lighting Manager
+
+
+Features
+
+        * Added controller algorithm to handle daylighting 
+          and color temperature (ATDL and ATCT)
+
+        * Added daylighting and color temperature control on scene flags
+
+        * Added new event flag for changes of the color tune level 
+
+        * Added new flags to signal that the control algorithm for 
+          color tuning and luminance reached a limit
+
+
+Changes
+
+        * ATCMxy returns only the matrix value 
+          (row and column will no longer be sent)
+
+
+Fixes
+
+        * Fixed ATLUXS write function
+
+        * Fixed startup condition for occupancy control
+
+        * Fixed lux value of external ambient light sensor TSL4531
+          (changed from little endian to big endian)
+
+
+Known issues & limitations
+
+        * The accuracy of the internal timer is under examination
+
+        * Only mode 0 has been tested
+
+        * color measurement is not fully tested yet
+
+*******************************************************************************
+Version: 8.0.0
+*******************************************************************************
+
+Supported Platforms
+
+        AS7221 Smart Lighting Manager
+
+
+Features
+
+        * Added command ATLUXS to switch between illumination sources
+
+        * Added new command ATBLINK: identification during maintenance
+
+        * Added new command ATLOG: enable logarithmic output on first PWM channel
+
+        * Added ramping for ATLIGHT command
+
+        * Added persistent memory support: Save some values permanently
+          Add functions: ATLAI, ATLAIE, ATFRST
+
+        * Added I2C write and read command: ATI2C
+
+
+Changes
+
+        * ATLUXE is no longer supported
+
+        * Read firmware lock status via ATFWC
+
+        * Change maximum ADC raw value for VDDHV>10V to 503 instead of 512
+
+
+Fixes
+
+        * Fixed problems with scene commands ATSnCCT, ATSnLUX, ATSnLED23M
+
+        * Fixed ATFWL function which corrupted the boot bytes
+
+        * Fixed default values for color tuning
+
+        * Fixed occupancy detection: detect light off state on initialization
+
+
+Known issues & limitations
+
+        * The accuracy of the internal timer is under examination
+
+        * Only mode 0 has been tested
+
+        * color measurement is not fully tested yet
+
+*******************************************************************************
+Version: 7.1.0
+*******************************************************************************
+
+Supported Platforms
+
+        AS7221 Smart Lighting Manager
+
+
+Features
+
+        n/a
+
+
+Changes
+
+        * Changed source code to met static code analysis requirements
+
+        * Only set DIM change event if old and new value differs
+
+        * Support DIM input on low VDDHV voltage with a higher resolution 
+
+
+Fixes
+
+        * Fix flash write function / fix flash erase function
+
+        * Adapt ranges for ATOCCT, ATDMINLUX, ATDMAXLUX, ATXMINCCT, ATXMAXCCT 
+
+        * Fix that day was not changed if it was Monday
+
+        * Fix PWM override handling and light off state 
+
+
+Known issues & limitations
+
+        * The accuracy of the internal timer is under examination
+
+        * Only mode 0 has been tested
+
+        * color measurement is not fully tested yet
+
+*******************************************************************************
+Version: 7.0.0
+*******************************************************************************
+
+Supported Platforms
+
+        AS7221 Smart Lighting Manager
+
+
+Features
+
+    List of new supported AT commands:
+
+        Read color data:
+        ATDATA, ATXYZC, ATSMALLXYC, ATUVPRIMEC, ATDUV, ATCCTC, ATLUXC
+
+        Configuration of color measurement:
+        ATINTTIME, ATGAIN
+
+        Control commands:
+        ATLED0
+
+        Calibration data:
+        ATXS, ATYS, ATZS, ATDXS, ATDYS, ATDZS, ATIRXS, ATIRYS, ATIRZS, CMxy
+
+
+Changes
+
+        * Changed threshold of DIM-pin change event to 1% instead of 2%
+
+        * Changed priority of commands 
+          new implementation: ATDIM (low), ATXPWM (middle), ATPWM (high)
+          old implementation: ATDIM (low), ATXPWM (high), ATPWM (high)
+
+
+Fixes
+
+        * fix rounding problems for ATDMIN, ATDMAX, ATXMIN, ATXMAX
+
+        * scene handling: color tune value (ATSnLED23M) was not reseted on ATCCLR
+
+        * scene handling: change detect for ATSnFLAGS was implemented faulty
+
+
+Known issues & limitations
+
+        * The accuracy of the internal timer is under examination
+
+        * Only mode 0 has been tested
+
+        * color neasurement is not fully tested yet
+
+*******************************************************************************
+Version: 6.0.0
+*******************************************************************************
+
+Supported Platforms
+
+        AS7221 Smart Lighting Manager
+
+Features
+
+    List of new supported AT commands:
+
+        External I2C devices:
+        ATESP, ATTEMPX, ATRHX, ATCCTE
+
+        Target values for daylight and CCT:
+        ATCCTT, ATLUXT
+
+        DIM/AUX commands:
+        ATDMD, ATDMIN, ATDMAX, ATDMINLUX, ATDMAXLUX, ATXE, ATXMD, ATXMIN
+        ATXMAX, ATXMINCCT, ATXMAXCCT, ATXVAL, ATOCCT
+
+        Firmware update
+        ATFWU, ATFW, ATFWS, ATFWL, ATFWC, ATFWA
+
+        Scene commands:
+        ATSnCCT, ATSnLUX, ATSnLED23M
+
+
+    Supported obsolete AT commands:
+
+        ATPASSWD (should not be used in future designs. Using it has no effect)
+        ATFWA (should not be used in future designs. Using it has no effect)
+
+
+Changes
+
+        n/a
+
+
+Fixes
+
+        * ATSnDIM: Dimming is now working
+
+        * ATSnRAMP: Has default value as ATRAMP in seconds
+
+        * ATSnFLAGS is set to 0xFFFF (artf17832)
+
+        * ATSnFLAGS=0xFFFF returns with error (artf17834)
+
+        * ATS0ON=256 returns with OK instead of ERROR (artf17833)
+
+        * ATS0RAMP=241 returns with OK instead of ERROR (artf17831)
+
+
+Known issues & limitations
+
+        * The accuracy of the internal timer is under examination
+
+        * Only mode 0 has been tested
+
+*******************************************************************************
+Version: 5.0.0
+*******************************************************************************
+
+Supported Platforms
+
+        AS7221 Smart Lighting Manager
+
+
+Features
+
+    List of currently supported AT commands:
+
+        Status commands:
+        AT, ATVERSW, ATVERHW, ATEVENT, ATTEMP
+
+        PWM commands:
+        ATLIGHT, ATPWMx, ATXPWMx, ATPWMOVR, ATDIM, ATLED23M, ATRAMP
+
+        Control commands:
+        ATSRST
+
+        DIM/AUX commands:
+        ATDE, ATDVAL, ATXE=0
+
+        Scene commands:
+        ATTIMENOW, ATDOW, ATCCLR, ATSnDAY, ATSnTIME, ATSnPWMx, ATSnRAMP,
+        ATSnFLAGS, ATSnON, ATTSON
+
+
+    Supported obsolete AT commands:
+
+        ATPASSWD (should not be used in future designs. Using it has no effect)
+
+
+Changes
+
+        n/a
+
+
+Fixes
+
+        n/a
+
+
+Known issues & limitations
+
+        * The accuracy of the internal timer is under examination
+
+        * ATSnDIM: Dimming not working
+
+        * ATSnRAMP: Has to be set in each scene
+
+        * Only mode 0 has been tested
