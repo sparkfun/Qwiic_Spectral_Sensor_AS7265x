@@ -16873,6 +16873,62 @@ part number 2062-2P from STA</description>
 <wire x1="4" y1="-6" x2="-4" y2="-6" width="0.3048" layer="20"/>
 <wire x1="-4" y1="-6" x2="-4" y2="-10.16" width="0.3048" layer="20"/>
 </package>
+<package name="PAD.02X.02">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.02" Square&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.02" x 0.02"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="0" y="0" dx="0.508" dy="0.508" layer="1"/>
+</package>
+<package name="PAD.03X.03">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.03" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.03" x 0.03"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="0" y="0" dx="0.762" dy="0.762" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="PAD.03X.05">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.05" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.05" x 0.05"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="0" y="0" dx="1.27" dy="1.27" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="PAD.03X.04">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.04" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.04" x 0.04"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="0" y="0" dx="1.016" dy="1.016" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="TP_15TH">
+<description>&lt;h3&gt;Electrically Conductive Via 0.015" Drill&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area:0.015"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<pad name="P$1" x="0" y="0" drill="0.381" diameter="0.6096" stop="no"/>
+<circle x="0" y="0" radius="0.381" width="0" layer="30"/>
+</package>
 </packages>
 <symbols>
 <symbol name="I2C_STANDARD">
@@ -16952,6 +17008,13 @@ part number 2062-2P from STA</description>
 <pin name="4" x="10.16" y="0" visible="pad" direction="pas" function="dot" rot="R180"/>
 <pin name="5" x="-7.62" y="-2.54" visible="pad" direction="pas" function="dot"/>
 <pin name="6" x="10.16" y="-2.54" visible="pad" direction="pas" function="dot" rot="R180"/>
+</symbol>
+<symbol name="TEST-POINT">
+<wire x1="2.54" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.302" y1="0.762" x2="3.302" y2="-0.762" width="0.1524" layer="94" curve="180"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" font="vector">&gt;Name</text>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" font="vector">&gt;Value</text>
+<pin name="1" x="0" y="0" visible="off" length="point" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -17734,6 +17797,60 @@ We carry &lt;a href=”https://www.sparkfun.com/products/14204”&gt;200mm&lt;/a
 <connect gate="G$1" pin="2" pad="2"/>
 <connect gate="G$1" pin="3" pad="3"/>
 <connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TEST-POINT" prefix="TP">
+<description>&lt;h3&gt;SparkFun Test Points&lt;/h3&gt;
+&lt;p&gt;Bare copper test points for troubleshooting or In-Circuit-Testing. These are used by our Production team for verifying production board runs using pogo-pins on test beds.&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;SparkFun Products:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/13284”&gt;SparkFun LSM9DS1 Breakout&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/13714”&gt;SparkFun PSOC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/13879"&gt;SparkFun Load Cell Amplifier&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="TEST-POINT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="2" package="PAD.02X.02">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3" package="PAD.03X.03">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3X5" package="PAD.03X.05">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="3X4" package="PAD.03X.04">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TP_15TH_THRU" package="TP_15TH">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -19586,7 +19703,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
-<library name="AS7265x">
+<library name="Qwiic_Spectral_Sensor-AS7265x">
+<description>Generated from &lt;b&gt;Qwiic_Spectral_Sensor-AS7265x.sch&lt;/b&gt;&lt;p&gt;
+by exp-lbrs.ulp</description>
 <packages>
 <package name="LGA20">
 <circle x="0.01" y="0.3883" radius="0.375" width="0.03" layer="51"/>
@@ -19642,6 +19761,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="!CS_SD" x="15.24" y="-7.62" length="short" rot="R180"/>
 <pin name="!INT" x="15.24" y="12.7" length="short" rot="R180"/>
 <pin name="!RST" x="15.24" y="15.24" length="short" rot="R180"/>
+<pin name="ADDR" x="15.24" y="5.08" length="short" rot="R180"/>
 <pin name="GND" x="-15.24" y="-12.7" length="short"/>
 <pin name="I2C_ENB" x="15.24" y="-12.7" length="short" rot="R180"/>
 <pin name="LED_DRV" x="-15.24" y="-7.62" length="short"/>
@@ -19650,13 +19770,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="MOSI" x="15.24" y="0" length="short" rot="R180"/>
 <pin name="RX/SCL" x="15.24" y="10.16" length="short" rot="R180"/>
 <pin name="SCK" x="15.24" y="2.54" length="short" rot="R180"/>
+<pin name="SCL_M" x="-15.24" y="10.16" length="short"/>
+<pin name="SDA_M" x="-15.24" y="7.62" length="short"/>
 <pin name="TX/SDA" x="15.24" y="7.62" length="short" rot="R180"/>
 <pin name="VDD" x="-15.24" y="15.24" length="short"/>
 <text x="-12.7" y="18.542" size="1.778" layer="95">&gt;Name</text>
 <text x="-12.7" y="-17.78" size="1.778" layer="96">&gt;Value</text>
-<pin name="SDA_M" x="-15.24" y="7.62" length="short"/>
-<pin name="SCL_M" x="-15.24" y="10.16" length="short"/>
-<pin name="ADDR" x="15.24" y="5.08" length="short" rot="R180"/>
 </symbol>
 <symbol name="AS72652/53">
 <wire x1="-12.7" y1="17.78" x2="12.7" y2="17.78" width="0.254" layer="94"/>
@@ -19669,15 +19788,15 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pin name="LED_DRV" x="-15.24" y="-7.62" length="short"/>
 <pin name="LED_IND" x="-15.24" y="-2.54" length="short"/>
 <pin name="MISO" x="15.24" y="-2.54" length="short" rot="R180"/>
+<pin name="SCL_S" x="15.24" y="10.16" length="short" rot="R180"/>
+<pin name="SDA_S" x="15.24" y="7.62" length="short" rot="R180"/>
 <pin name="VDD" x="-15.24" y="15.24" length="short"/>
 <text x="-12.7" y="18.542" size="1.778" layer="95">&gt;Name</text>
 <text x="-12.7" y="-17.78" size="1.778" layer="96">&gt;Value</text>
-<pin name="SDA_S" x="15.24" y="7.62" length="short" rot="R180"/>
-<pin name="SCL_S" x="15.24" y="10.16" length="short" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="AS7265X" prefix="U">
+<deviceset name="AS72651" prefix="U">
 <gates>
 <gate name="U1" symbol="AS7265X" x="0" y="0"/>
 </gates>
@@ -19703,30 +19822,59 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <connect gate="U1" pin="VDD" pad="14 17"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PROD_ID" value="IC-14127" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="AS72652/53" prefix="U">
+<deviceset name="AS72652" prefix="U">
 <gates>
-<gate name="U" symbol="AS72652/53" x="0" y="-2.54"/>
+<gate name="U1" symbol="AS72652/53" x="0" y="-2.54"/>
 </gates>
 <devices>
 <device name="" package="LGA20">
 <connects>
-<connect gate="U" pin="!CS_SD" pad="7"/>
-<connect gate="U" pin="!RST" pad="2"/>
-<connect gate="U" pin="GND" pad="16"/>
-<connect gate="U" pin="LED_DRV" pad="15"/>
-<connect gate="U" pin="LED_IND" pad="18"/>
-<connect gate="U" pin="MISO" pad="5"/>
-<connect gate="U" pin="SCL_S" pad="9"/>
-<connect gate="U" pin="SDA_S" pad="10"/>
-<connect gate="U" pin="VDD" pad="14 17"/>
+<connect gate="U1" pin="!CS_SD" pad="7"/>
+<connect gate="U1" pin="!RST" pad="2"/>
+<connect gate="U1" pin="GND" pad="16"/>
+<connect gate="U1" pin="LED_DRV" pad="15"/>
+<connect gate="U1" pin="LED_IND" pad="18"/>
+<connect gate="U1" pin="MISO" pad="5"/>
+<connect gate="U1" pin="SCL_S" pad="9"/>
+<connect gate="U1" pin="SDA_S" pad="10"/>
+<connect gate="U1" pin="VDD" pad="14 17"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PROD_ID" value="IC-14128" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="AS72653" prefix="U">
+<gates>
+<gate name="U1" symbol="AS72652/53" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="LGA20">
+<connects>
+<connect gate="U1" pin="!CS_SD" pad="7"/>
+<connect gate="U1" pin="!RST" pad="2"/>
+<connect gate="U1" pin="GND" pad="16"/>
+<connect gate="U1" pin="LED_DRV" pad="15"/>
+<connect gate="U1" pin="LED_IND" pad="18"/>
+<connect gate="U1" pin="MISO" pad="5"/>
+<connect gate="U1" pin="SCL_S" pad="9"/>
+<connect gate="U1" pin="SDA_S" pad="10"/>
+<connect gate="U1" pin="VDD" pad="14 17"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="IC-14129" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -19762,7 +19910,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="LOGO4" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
 <part name="FD1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 <part name="FD2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
-<part name="U1" library="AS7265x" deviceset="AS7265X" device="" value="AS72651"/>
+<part name="U1" library="Qwiic_Spectral_Sensor-AS7265x" deviceset="AS72651" device="" value="AS72651"/>
 <part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="R3" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
@@ -19829,8 +19977,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="BULB3" library="SparkX" deviceset="LED" device="NS" value=""/>
 <part name="R8" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
 <part name="GND21" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
-<part name="U5" library="AS7265x" deviceset="AS72652/53" device="" value="AS72653"/>
-<part name="U6" library="AS7265x" deviceset="AS72652/53" device="" value="AS72652"/>
+<part name="U5" library="Qwiic_Spectral_Sensor-AS7265x" deviceset="AS72653" device="" value="AS72653"/>
+<part name="U6" library="Qwiic_Spectral_Sensor-AS7265x" deviceset="AS72652" device="" value="AS72652"/>
 <part name="JP5" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_NO-SILK" value=""/>
 <part name="JP3" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_NO-SILK" value=""/>
 <part name="JP4" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_NO-SILK" value=""/>
@@ -19847,6 +19995,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_FLAME" device=".1_INCH"/>
 <part name="D5" library="SparkFun-LED" deviceset="LED-UV" device="PLCC" value="UV"/>
 <part name="D3" library="SparkFun-LED" deviceset="LED-IR" device="0603" value="IR"/>
+<part name="TP1" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3" value=""/>
 </parts>
 <sheets>
 <sheet>
@@ -20166,11 +20315,11 @@ VLMU3100-GS08</text>
 <instance part="GND21" gate="1" x="424.18" y="99.06">
 <attribute name="VALUE" x="424.18" y="98.806" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="U5" gate="U" x="406.4" y="124.46">
+<instance part="U5" gate="U1" x="406.4" y="124.46">
 <attribute name="NAME" x="393.7" y="143.002" size="1.778" layer="95"/>
 <attribute name="VALUE" x="393.7" y="106.68" size="1.778" layer="96"/>
 </instance>
-<instance part="U6" gate="U" x="309.88" y="127">
+<instance part="U6" gate="U1" x="309.88" y="127">
 <attribute name="NAME" x="297.18" y="145.542" size="1.778" layer="95"/>
 <attribute name="VALUE" x="297.18" y="109.22" size="1.778" layer="96"/>
 </instance>
@@ -20224,6 +20373,10 @@ VLMU3100-GS08</text>
 <attribute name="VALUE" x="382.905" y="135.128" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
 <instance part="D3" gate="G$1" x="284.48" y="142.24"/>
+<instance part="TP1" gate="G$1" x="114.3" y="116.84" smashed="yes">
+<attribute name="NAME" x="118.364" y="116.078" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="111.76" y="114.3" size="1.778" layer="96" font="vector"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -20300,7 +20453,7 @@ VLMU3100-GS08</text>
 <wire x1="294.64" y1="114.3" x2="292.1" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="114.3" x2="292.1" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="GND13" gate="1" pin="GND"/>
-<pinref part="U6" gate="U" pin="GND"/>
+<pinref part="U6" gate="U1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="2"/>
@@ -20326,7 +20479,7 @@ VLMU3100-GS08</text>
 <wire x1="391.16" y1="111.76" x2="388.62" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="388.62" y1="111.76" x2="388.62" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="GND19" gate="1" pin="GND"/>
-<pinref part="U5" gate="U" pin="GND"/>
+<pinref part="U5" gate="U1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C7" gate="G$1" pin="2"/>
@@ -20522,7 +20675,7 @@ VLMU3100-GS08</text>
 <wire x1="294.64" y1="142.24" x2="292.1" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="142.24" x2="292.1" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="SUPPLY19" gate="G$1" pin="3.3V"/>
-<pinref part="U6" gate="U" pin="VDD"/>
+<pinref part="U6" gate="U1" pin="VDD"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="1"/>
@@ -20558,7 +20711,7 @@ VLMU3100-GS08</text>
 <wire x1="391.16" y1="139.7" x2="388.62" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="388.62" y1="139.7" x2="388.62" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="SUPPLY27" gate="G$1" pin="3.3V"/>
-<pinref part="U5" gate="U" pin="VDD"/>
+<pinref part="U5" gate="U1" pin="VDD"/>
 </segment>
 <segment>
 <pinref part="C7" gate="G$1" pin="1"/>
@@ -20599,7 +20752,7 @@ VLMU3100-GS08</text>
 <segment>
 <wire x1="421.64" y1="139.7" x2="424.18" y2="139.7" width="0.1524" layer="91"/>
 <label x="424.18" y="139.7" size="1.27" layer="95" xref="yes"/>
-<pinref part="U5" gate="U" pin="!RST"/>
+<pinref part="U5" gate="U1" pin="!RST"/>
 </segment>
 </net>
 <net name="!INT" class="0">
@@ -20639,6 +20792,8 @@ VLMU3100-GS08</text>
 <wire x1="91.44" y1="116.84" x2="111.76" y2="116.84" width="0.1524" layer="91"/>
 <junction x="111.76" y="116.84"/>
 <pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="111.76" y1="116.84" x2="114.3" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="TP1" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -20746,7 +20901,7 @@ VLMU3100-GS08</text>
 <wire x1="294.64" y1="119.38" x2="284.48" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="284.48" y1="119.38" x2="284.48" y2="129.54" width="0.1524" layer="91"/>
 <junction x="284.48" y="129.54"/>
-<pinref part="U6" gate="U" pin="LED_DRV"/>
+<pinref part="U6" gate="U1" pin="LED_DRV"/>
 <pinref part="D3" gate="G$1" pin="C"/>
 </segment>
 </net>
@@ -20766,7 +20921,7 @@ VLMU3100-GS08</text>
 <segment>
 <wire x1="325.12" y1="137.16" x2="327.66" y2="137.16" width="0.1524" layer="91"/>
 <label x="327.66" y="137.16" size="1.27" layer="95" xref="yes"/>
-<pinref part="U6" gate="U" pin="SCL_S"/>
+<pinref part="U6" gate="U1" pin="SCL_S"/>
 </segment>
 <segment>
 <wire x1="314.96" y1="182.88" x2="314.96" y2="180.34" width="0.1524" layer="91"/>
@@ -20777,7 +20932,7 @@ VLMU3100-GS08</text>
 <segment>
 <wire x1="421.64" y1="134.62" x2="424.18" y2="134.62" width="0.1524" layer="91"/>
 <label x="424.18" y="134.62" size="1.27" layer="95" xref="yes"/>
-<pinref part="U5" gate="U" pin="SCL_S"/>
+<pinref part="U5" gate="U1" pin="SCL_S"/>
 </segment>
 </net>
 <net name="SDA_S" class="0">
@@ -20789,7 +20944,7 @@ VLMU3100-GS08</text>
 <segment>
 <wire x1="325.12" y1="134.62" x2="327.66" y2="134.62" width="0.1524" layer="91"/>
 <label x="327.66" y="134.62" size="1.27" layer="95" xref="yes"/>
-<pinref part="U6" gate="U" pin="SDA_S"/>
+<pinref part="U6" gate="U1" pin="SDA_S"/>
 </segment>
 <segment>
 <wire x1="299.72" y1="182.88" x2="299.72" y2="180.34" width="0.1524" layer="91"/>
@@ -20800,7 +20955,7 @@ VLMU3100-GS08</text>
 <segment>
 <wire x1="421.64" y1="132.08" x2="424.18" y2="132.08" width="0.1524" layer="91"/>
 <label x="424.18" y="132.08" size="1.27" layer="95" xref="yes"/>
-<pinref part="U5" gate="U" pin="SDA_S"/>
+<pinref part="U5" gate="U1" pin="SDA_S"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -20808,7 +20963,7 @@ VLMU3100-GS08</text>
 <pinref part="R5" gate="G$1" pin="2"/>
 <wire x1="325.12" y1="119.38" x2="327.66" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="327.66" y1="119.38" x2="327.66" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="U6" gate="U" pin="!CS_SD"/>
+<pinref part="U6" gate="U1" pin="!CS_SD"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -20816,14 +20971,14 @@ VLMU3100-GS08</text>
 <pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="325.12" y1="124.46" x2="335.28" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="335.28" y1="124.46" x2="335.28" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="U6" gate="U" pin="MISO"/>
+<pinref part="U6" gate="U1" pin="MISO"/>
 </segment>
 </net>
 <net name="!RST-ADDR" class="0">
 <segment>
 <wire x1="325.12" y1="142.24" x2="327.66" y2="142.24" width="0.1524" layer="91"/>
 <label x="327.66" y="142.24" size="1.27" layer="95" xref="yes"/>
-<pinref part="U6" gate="U" pin="!RST"/>
+<pinref part="U6" gate="U1" pin="!RST"/>
 </segment>
 <segment>
 <pinref part="U1" gate="U1" pin="ADDR"/>
@@ -20838,7 +20993,7 @@ VLMU3100-GS08</text>
 <pinref part="BULB3" gate="D1" pin="C"/>
 <wire x1="391.16" y1="116.84" x2="381" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="381" y1="116.84" x2="381" y2="127" width="0.1524" layer="91"/>
-<pinref part="U5" gate="U" pin="LED_DRV"/>
+<pinref part="U5" gate="U1" pin="LED_DRV"/>
 <wire x1="381" y1="134.62" x2="381" y2="127" width="0.1524" layer="91"/>
 <junction x="381" y="127"/>
 <pinref part="D5" gate="D1" pin="C"/>
@@ -20856,7 +21011,7 @@ VLMU3100-GS08</text>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="421.64" y1="116.84" x2="424.18" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="424.18" y1="116.84" x2="424.18" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="U5" gate="U" pin="!CS_SD"/>
+<pinref part="U5" gate="U1" pin="!CS_SD"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -20864,7 +21019,7 @@ VLMU3100-GS08</text>
 <pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="421.64" y1="121.92" x2="431.8" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="431.8" y1="121.92" x2="431.8" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="U5" gate="U" pin="MISO"/>
+<pinref part="U5" gate="U1" pin="MISO"/>
 </segment>
 </net>
 <net name="N$1" class="0">

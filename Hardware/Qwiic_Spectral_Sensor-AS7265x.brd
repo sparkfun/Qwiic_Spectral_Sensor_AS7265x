@@ -987,6 +987,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="-1.397" y="-2.159" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
 <text x="-1.651" y="-3.302" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
 </package>
+<package name="PAD.03X.03">
+<description>&lt;h3&gt;Electrically Conductive Pad 0.03" Circle&lt;/h3&gt;
+Used as a test point connection for pogo pins or other debugging tools. 
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 0.03" x 0.03"&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;TEST_POINT&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="P$1" x="0" y="0" dx="0.762" dy="0.762" layer="1" roundness="100" cream="no"/>
+</package>
 </packages>
 </library>
 <library name="SparkFun-Jumpers">
@@ -1305,53 +1316,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="0" y="0.5588" curve="90"/>
 <vertex x="-0.5588" y="0"/>
 </polygon>
-</package>
-</packages>
-</library>
-<library name="AS7265x">
-<packages>
-<package name="LGA20">
-<circle x="0.01" y="0.3883" radius="0.375" width="0.03" layer="51"/>
-<circle x="0.01" y="0.3883" radius="0.55" width="0.03" layer="51"/>
-<circle x="-2.8" y="2" radius="0.1" width="0.2" layer="21"/>
-<wire x1="-2.35" y1="2.25" x2="2.35" y2="2.25" width="0.127" layer="51"/>
-<wire x1="2.35" y1="2.25" x2="2.35" y2="-2.25" width="0.127" layer="51"/>
-<wire x1="2.35" y1="-2.25" x2="-2.35" y2="-2.25" width="0.127" layer="51"/>
-<wire x1="-2.35" y1="-2.25" x2="-2.35" y2="2.25" width="0.127" layer="51"/>
-<wire x1="-2.1" y1="2" x2="-1.7" y2="2" width="0.05" layer="51"/>
-<wire x1="-1.7" y1="2" x2="-2.1" y2="1.6" width="0.05" layer="51"/>
-<wire x1="-2.1" y1="1.6" x2="-2.1" y2="2" width="0.05" layer="51"/>
-<wire x1="-2.4" y1="1.7" x2="-2.4" y2="2.3" width="0.127" layer="21"/>
-<wire x1="-2.4" y1="2.3" x2="-1.7" y2="2.3" width="0.127" layer="21"/>
-<wire x1="1.7" y1="2.3" x2="2.4" y2="2.3" width="0.127" layer="21"/>
-<wire x1="2.4" y1="1.7" x2="2.4" y2="2.3" width="0.127" layer="21"/>
-<wire x1="-2.4" y1="-2.3" x2="-1.7" y2="-2.3" width="0.127" layer="21"/>
-<wire x1="1.7" y1="-2.3" x2="2.4" y2="-2.3" width="0.127" layer="21"/>
-<wire x1="2.4" y1="-2.3" x2="2.4" y2="-1.7" width="0.127" layer="21"/>
-<wire x1="-2.4" y1="-2.3" x2="-2.4" y2="-1.7" width="0.127" layer="21"/>
-<rectangle x1="-1.27" y1="-1.27" x2="1.27" y2="1.27" layer="41"/>
-<smd name="1" x="-2.2" y="1.3" dx="0.3" dy="1.1" layer="1" rot="R90"/>
-<smd name="2" x="-2.2" y="0.65" dx="0.3" dy="1.1" layer="1" rot="R90"/>
-<smd name="3" x="-2.2" y="0" dx="0.3" dy="1.1" layer="1" rot="R90"/>
-<smd name="4" x="-2.2" y="-0.65" dx="0.3" dy="1.1" layer="1" rot="R90"/>
-<smd name="5" x="-2.2" y="-1.3" dx="0.3" dy="1.1" layer="1" rot="R90"/>
-<smd name="6" x="-1.3" y="-2.2" dx="0.3" dy="1.1" layer="1" rot="R180"/>
-<smd name="7" x="-0.65" y="-2.2" dx="0.3" dy="1.1" layer="1" rot="R180"/>
-<smd name="8" x="0" y="-2.2" dx="0.3" dy="1.1" layer="1" rot="R180"/>
-<smd name="9" x="0.65" y="-2.2" dx="0.3" dy="1.1" layer="1" rot="R180"/>
-<smd name="10" x="1.3" y="-2.2" dx="0.3" dy="1.1" layer="1" rot="R180"/>
-<smd name="11" x="2.2" y="-1.3" dx="0.3" dy="1.1" layer="1" rot="R270"/>
-<smd name="12" x="2.2" y="-0.65" dx="0.3" dy="1.1" layer="1" rot="R270"/>
-<smd name="13" x="2.2" y="0" dx="0.3" dy="1.1" layer="1" rot="R270"/>
-<smd name="14" x="2.2" y="0.65" dx="0.3" dy="1.1" layer="1" rot="R270"/>
-<smd name="15" x="2.2" y="1.3" dx="0.3" dy="1.1" layer="1" rot="R270"/>
-<smd name="16" x="1.3" y="2.3" dx="0.3" dy="1.1" layer="1"/>
-<smd name="17" x="0.65" y="2.3" dx="0.3" dy="1.1" layer="1"/>
-<smd name="18" x="0" y="2.3" dx="0.3" dy="1.1" layer="1"/>
-<smd name="19" x="-0.65" y="2.3" dx="0.3" dy="1.1" layer="1"/>
-<smd name="20" x="-1.3" y="2.3" dx="0.3" dy="1.1" layer="1"/>
-<text x="-1.651" y="3.429" size="0.762" layer="25">&gt;Name</text>
-<text x="-2.032" y="-4.064" size="0.762" layer="27">&gt;Value</text>
 </package>
 </packages>
 </library>
@@ -5056,6 +5020,55 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 </library>
+<library name="Qwiic_Spectral_Sensor-AS7265x">
+<description>Generated from &lt;b&gt;Qwiic_Spectral_Sensor-AS7265x.sch&lt;/b&gt;&lt;p&gt;
+by exp-lbrs.ulp</description>
+<packages>
+<package name="LGA20">
+<circle x="0.01" y="0.3883" radius="0.375" width="0.03" layer="51"/>
+<circle x="0.01" y="0.3883" radius="0.55" width="0.03" layer="51"/>
+<circle x="-2.8" y="2" radius="0.1" width="0.2" layer="21"/>
+<wire x1="-2.35" y1="2.25" x2="2.35" y2="2.25" width="0.127" layer="51"/>
+<wire x1="2.35" y1="2.25" x2="2.35" y2="-2.25" width="0.127" layer="51"/>
+<wire x1="2.35" y1="-2.25" x2="-2.35" y2="-2.25" width="0.127" layer="51"/>
+<wire x1="-2.35" y1="-2.25" x2="-2.35" y2="2.25" width="0.127" layer="51"/>
+<wire x1="-2.1" y1="2" x2="-1.7" y2="2" width="0.05" layer="51"/>
+<wire x1="-1.7" y1="2" x2="-2.1" y2="1.6" width="0.05" layer="51"/>
+<wire x1="-2.1" y1="1.6" x2="-2.1" y2="2" width="0.05" layer="51"/>
+<wire x1="-2.4" y1="1.7" x2="-2.4" y2="2.3" width="0.127" layer="21"/>
+<wire x1="-2.4" y1="2.3" x2="-1.7" y2="2.3" width="0.127" layer="21"/>
+<wire x1="1.7" y1="2.3" x2="2.4" y2="2.3" width="0.127" layer="21"/>
+<wire x1="2.4" y1="1.7" x2="2.4" y2="2.3" width="0.127" layer="21"/>
+<wire x1="-2.4" y1="-2.3" x2="-1.7" y2="-2.3" width="0.127" layer="21"/>
+<wire x1="1.7" y1="-2.3" x2="2.4" y2="-2.3" width="0.127" layer="21"/>
+<wire x1="2.4" y1="-2.3" x2="2.4" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="-2.4" y1="-2.3" x2="-2.4" y2="-1.7" width="0.127" layer="21"/>
+<rectangle x1="-1.27" y1="-1.27" x2="1.27" y2="1.27" layer="41"/>
+<smd name="1" x="-2.2" y="1.3" dx="0.3" dy="1.1" layer="1" rot="R90"/>
+<smd name="2" x="-2.2" y="0.65" dx="0.3" dy="1.1" layer="1" rot="R90"/>
+<smd name="3" x="-2.2" y="0" dx="0.3" dy="1.1" layer="1" rot="R90"/>
+<smd name="4" x="-2.2" y="-0.65" dx="0.3" dy="1.1" layer="1" rot="R90"/>
+<smd name="5" x="-2.2" y="-1.3" dx="0.3" dy="1.1" layer="1" rot="R90"/>
+<smd name="6" x="-1.3" y="-2.2" dx="0.3" dy="1.1" layer="1" rot="R180"/>
+<smd name="7" x="-0.65" y="-2.2" dx="0.3" dy="1.1" layer="1" rot="R180"/>
+<smd name="8" x="0" y="-2.2" dx="0.3" dy="1.1" layer="1" rot="R180"/>
+<smd name="9" x="0.65" y="-2.2" dx="0.3" dy="1.1" layer="1" rot="R180"/>
+<smd name="10" x="1.3" y="-2.2" dx="0.3" dy="1.1" layer="1" rot="R180"/>
+<smd name="11" x="2.2" y="-1.3" dx="0.3" dy="1.1" layer="1" rot="R270"/>
+<smd name="12" x="2.2" y="-0.65" dx="0.3" dy="1.1" layer="1" rot="R270"/>
+<smd name="13" x="2.2" y="0" dx="0.3" dy="1.1" layer="1" rot="R270"/>
+<smd name="14" x="2.2" y="0.65" dx="0.3" dy="1.1" layer="1" rot="R270"/>
+<smd name="15" x="2.2" y="1.3" dx="0.3" dy="1.1" layer="1" rot="R270"/>
+<smd name="16" x="1.3" y="2.3" dx="0.3" dy="1.1" layer="1"/>
+<smd name="17" x="0.65" y="2.3" dx="0.3" dy="1.1" layer="1"/>
+<smd name="18" x="0" y="2.3" dx="0.3" dy="1.1" layer="1"/>
+<smd name="19" x="-0.65" y="2.3" dx="0.3" dy="1.1" layer="1"/>
+<smd name="20" x="-1.3" y="2.3" dx="0.3" dy="1.1" layer="1"/>
+<text x="-1.651" y="3.429" size="0.762" layer="25">&gt;Name</text>
+<text x="-2.032" y="-4.064" size="0.762" layer="27">&gt;Value</text>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -5280,10 +5293,11 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="LOGO4" library="SparkFun-Aesthetics" package="OSHW-LOGO-S" value="OSHW-LOGOS" x="33.02" y="-16.51" rot="MR0"/>
 <element name="FD1" library="SparkFun-Aesthetics" package="FIDUCIAL-1X2" value="FIDUCIAL1X2" x="1.27" y="-17.78"/>
 <element name="FD2" library="SparkFun-Aesthetics" package="FIDUCIAL-1X2" value="FIDUCIAL1X2" x="34.29" y="20.32"/>
-<element name="U1" library="AS7265x" package="LGA20" value="AS72651" x="17.78" y="7.619953125" smashed="yes" rot="R270">
+<element name="U1" library="Qwiic_Spectral_Sensor-AS7265x" package="LGA20" value="AS72651" x="17.78" y="7.619953125" smashed="yes" rot="R270">
 <attribute name="NAME" x="21.208984375" y="9.270953125" size="0.762" layer="25" rot="R270"/>
 <attribute name="NAME" x="21.209" y="9.270953125" size="0.762" layer="25" rot="R270"/>
 <attribute name="VALUE" x="15.367" y="4.064" size="0.762" layer="27"/>
+<attribute name="PROD_ID" value="IC-14127" x="17.78" y="7.619953125" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R3" library="SparkFun-Resistors" package="0603" value="10k" x="13.2080375" y="7.61996875" rot="R270">
 <attribute name="NAME" x="13.9700375" y="7.61996875" size="0.6096" layer="25" font="vector" ratio="20" rot="R270" align="bottom-center"/>
@@ -5396,15 +5410,17 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="5.715" y="-5.715" size="0.6096" layer="27" font="vector" ratio="20" rot="R120" align="top-center"/>
 <attribute name="NAME" x="6.67149375" y="-6.413496875" size="0.6096" layer="25" font="vector" ratio="20" rot="R120" align="bottom-center"/>
 </element>
-<element name="U5" library="AS7265x" package="LGA20" value="AS72653" x="11.18111875" y="-3.80996875" smashed="yes" rot="R300">
+<element name="U5" library="Qwiic_Spectral_Sensor-AS7265x" package="LGA20" value="AS72653" x="11.18111875" y="-3.80996875" smashed="yes" rot="R300">
 <attribute name="NAME" x="13.325221875" y="-0.665659375" size="0.762" layer="25" rot="R300"/>
 <attribute name="NAME" x="13.32521875" y="-0.665659375" size="0.762" layer="25" rot="R300"/>
 <attribute name="VALUE" x="6.858" y="-3.683" size="0.762" layer="27" rot="R300"/>
+<attribute name="PROD_ID" value="IC-14129" x="11.18111875" y="-3.80996875" size="1.778" layer="27" rot="R300" display="off"/>
 </element>
-<element name="U6" library="AS7265x" package="LGA20" value="AS72652" x="24.378890625" y="-3.809965625" smashed="yes" rot="R60">
+<element name="U6" library="Qwiic_Spectral_Sensor-AS7265x" package="LGA20" value="AS72652" x="24.378890625" y="-3.809965625" smashed="yes" rot="R60">
 <attribute name="NAME" x="20.5837875" y="-3.525271875" size="0.762" layer="25" rot="R60"/>
 <attribute name="VALUE" x="26.416" y="-7.493" size="0.762" layer="27" rot="R60"/>
 <attribute name="NAME" x="20.5837875" y="-3.525271875" size="0.762" layer="25" rot="R60"/>
+<attribute name="PROD_ID" value="IC-14128" x="24.378890625" y="-3.809965625" size="1.778" layer="27" rot="R60" display="off"/>
 </element>
 <element name="JP5" library="SparkFun-Jumpers" package="SMT-JUMPER_2_NC_TRACE_NO-SILK" value="" x="25.58438125" y="5.5323875" rot="R30">
 <attribute name="NAME" x="25.01288125" y="6.522253125" size="0.6096" layer="25" font="vector" ratio="20" rot="R30" align="bottom-center"/>
@@ -5501,6 +5517,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="D3" library="SparkFun-LED" package="LED-0603" value="IR" x="24.384" y="3.81" rot="R300">
 <attribute name="PROD_ID" value="DIO-14125" x="24.384" y="3.81" size="1.778" layer="27" font="vector" ratio="15" rot="R300" display="off"/>
 </element>
+<element name="TP1" library="SparkFun-Connectors" package="PAD.03X.03" value="" x="13.97" y="7.62" rot="MR0"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -5889,6 +5906,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="11.684" y1="14.986" x2="11.176" y2="14.986" width="0.2032" layer="16"/>
 <wire x1="11.176" y1="14.986" x2="10.5664" y2="14.3764" width="0.2032" layer="16"/>
 <wire x1="10.5664" y1="11.43" x2="10.5664" y2="14.3764" width="0.2032" layer="16"/>
+<contactref element="TP1" pad="P$1"/>
+<wire x1="13.97" y1="7.62" x2="13.97" y2="9.2709625" width="0.2032" layer="16"/>
+<wire x1="13.97" y1="9.2709625" x2="13.3350125" y2="9.90595" width="0.2032" layer="16"/>
 </signal>
 <signal name="MISO">
 <contactref element="U1" pad="5"/>
