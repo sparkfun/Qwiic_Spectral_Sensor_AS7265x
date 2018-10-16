@@ -20077,6 +20077,8 @@ by exp-lbrs.ulp</description>
 <part name="D5" library="SparkFun-LED" deviceset="LED-UV" device="PLCC" value="UV"/>
 <part name="D3" library="SparkFun-LED" deviceset="LED-IR" device="0603" value="IR"/>
 <part name="TP1" library="SparkFun-Connectors" deviceset="TEST-POINT" device="3" value=""/>
+<part name="JP6" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_NO-SILK" value=""/>
+<part name="JP7" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NC_TRACE" device="_NO-SILK" value=""/>
 </parts>
 <sheets>
 <sheet>
@@ -20097,7 +20099,7 @@ I2C pullups from bus</text>
 JP1 must be cleared
 to disconnect I2C pull-ups </text>
 <text x="149.352" y="97.282" size="1.778" layer="97">The AS7261 must be held in reset while programming flash</text>
-<text x="35.56" y="160.02" size="1.27" layer="97" align="center-left">Open JP4 to use an external bulb</text>
+<text x="17.78" y="129.54" size="1.27" layer="97" rot="R90" align="center-left">Open JP4 to use an external bulb</text>
 <text x="58.42" y="90.17" size="1.778" layer="97" align="center">Serial</text>
 <text x="73.152" y="92.71" size="1.778" layer="97" align="center">JP1</text>
 <text x="88.9" y="92.71" size="1.778" layer="97" align="center">JP2</text>
@@ -20233,8 +20235,8 @@ VLMU3100-GS08</text>
 <attribute name="NAME" x="39.751" y="140.208" size="1.778" layer="95" font="vector" rot="R90"/>
 <attribute name="VALUE" x="45.085" y="140.208" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
-<instance part="SUPPLY8" gate="G$1" x="43.18" y="149.86" smashed="yes">
-<attribute name="VALUE" x="43.18" y="152.654" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY8" gate="G$1" x="43.18" y="162.56" smashed="yes">
+<attribute name="VALUE" x="43.18" y="165.354" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 <instance part="C3" gate="G$1" x="22.86" y="88.9" smashed="yes">
 <attribute name="NAME" x="24.384" y="91.821" size="1.778" layer="95" font="vector"/>
@@ -20444,19 +20446,19 @@ VLMU3100-GS08</text>
 <attribute name="NAME" x="18.796" y="40.64" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="21.844" y="40.64" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="D4" gate="G$1" x="50.8" y="53.34" smashed="yes">
-<attribute name="NAME" x="47.371" y="48.768" size="1.778" layer="95" font="vector" rot="R90"/>
-<attribute name="VALUE" x="52.705" y="48.768" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
+<instance part="D4" gate="G$1" x="50.8" y="35.56" smashed="yes">
+<attribute name="NAME" x="47.371" y="30.988" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="52.705" y="30.988" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
-<instance part="SUPPLY22" gate="G$1" x="50.8" y="58.42" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="50.8" y="61.214" size="1.778" layer="96" rot="MR0" align="bottom-center"/>
+<instance part="SUPPLY22" gate="G$1" x="50.8" y="66.04" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="50.8" y="68.834" size="1.778" layer="96" rot="MR0" align="bottom-center"/>
 </instance>
-<instance part="R2" gate="G$1" x="50.8" y="40.64" smashed="yes" rot="R90">
-<attribute name="NAME" x="49.276" y="40.64" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="52.324" y="40.64" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
+<instance part="R2" gate="G$1" x="50.8" y="45.72" smashed="yes" rot="R90">
+<attribute name="NAME" x="49.276" y="45.72" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="52.324" y="45.72" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="GND22" gate="1" x="50.8" y="30.48" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="50.8" y="30.226" size="1.778" layer="96" rot="MR0" align="top-center"/>
+<instance part="GND22" gate="1" x="50.8" y="25.4" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="50.8" y="25.146" size="1.778" layer="96" rot="MR0" align="top-center"/>
 </instance>
 <instance part="FD3" gate="G$1" x="236.22" y="27.94" smashed="yes"/>
 <instance part="FD4" gate="G$1" x="236.22" y="25.4" smashed="yes"/>
@@ -20472,6 +20474,14 @@ VLMU3100-GS08</text>
 <instance part="TP1" gate="G$1" x="114.3" y="116.84" smashed="yes">
 <attribute name="NAME" x="118.364" y="116.078" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="111.76" y="114.3" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="JP6" gate="G$1" x="43.18" y="154.94" smashed="yes" rot="R90">
+<attribute name="NAME" x="40.64" y="152.4" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="45.72" y="152.4" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
+</instance>
+<instance part="JP7" gate="G$1" x="50.8" y="58.42" smashed="yes" rot="R90">
+<attribute name="NAME" x="48.26" y="55.88" size="1.778" layer="95" font="vector" rot="R90"/>
+<attribute name="VALUE" x="53.34" y="55.88" size="1.778" layer="96" font="vector" rot="R90" align="top-left"/>
 </instance>
 </instances>
 <busses>
@@ -20593,9 +20603,9 @@ VLMU3100-GS08</text>
 <wire x1="424.18" y1="101.6" x2="424.18" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="GND22" gate="1" pin="GND"/>
-<wire x1="50.8" y1="33.02" x2="50.8" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="D4" gate="G$1" pin="C"/>
+<wire x1="50.8" y1="30.48" x2="50.8" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RX/SCL" class="0">
@@ -20719,11 +20729,6 @@ VLMU3100-GS08</text>
 <pinref part="SUPPLY7" gate="G$1" pin="3.3V"/>
 </segment>
 <segment>
-<pinref part="D1" gate="G$1" pin="A"/>
-<pinref part="SUPPLY8" gate="G$1" pin="3.3V"/>
-<wire x1="43.18" y1="147.32" x2="43.18" y2="149.86" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="C3" gate="G$1" pin="1"/>
 <pinref part="SUPPLY10" gate="G$1" pin="3.3V"/>
 <wire x1="22.86" y1="96.52" x2="22.86" y2="93.98" width="0.1524" layer="91"/>
@@ -20825,9 +20830,14 @@ VLMU3100-GS08</text>
 <pinref part="JP3" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="D4" gate="G$1" pin="A"/>
 <pinref part="SUPPLY22" gate="G$1" pin="3.3V"/>
-<wire x1="50.8" y1="58.42" x2="50.8" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="63.5" x2="50.8" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="JP7" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="SUPPLY8" gate="G$1" pin="3.3V"/>
+<pinref part="JP6" gate="G$1" pin="2"/>
+<wire x1="43.18" y1="160.02" x2="43.18" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="!RST" class="0">
@@ -21120,9 +21130,23 @@ VLMU3100-GS08</text>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="D4" gate="G$1" pin="C"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="50.8" y1="45.72" x2="50.8" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="50.8" x2="50.8" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="JP7" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="D4" gate="G$1" pin="A"/>
+<pinref part="R2" gate="G$1" pin="1"/>
+<wire x1="50.8" y1="40.64" x2="50.8" y2="38.1" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="D1" gate="G$1" pin="A"/>
+<pinref part="JP6" gate="G$1" pin="1"/>
+<wire x1="43.18" y1="149.86" x2="43.18" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
