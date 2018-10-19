@@ -43,7 +43,7 @@
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
 <layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
@@ -197,17 +197,11 @@
 <wire x1="35.559975" y1="40.63995" x2="35.559975" y2="0" width="0.2032" layer="51"/>
 <wire x1="35.559975" y1="0" x2="0.000025" y2="0" width="0.2032" layer="51"/>
 <wire x1="0.000025" y1="0" x2="0.000025" y2="40.63995" width="0.2032" layer="51"/>
-<hole x="7.493025" y="24.046078125" drill="1.700021875"/>
 <circle x="6.731025" y="24.046078125" radius="0.9398" width="0" layer="51"/>
-<hole x="8.763025" y="26.24579375" drill="1.700021875"/>
 <circle x="8.001025" y="26.24579375" radius="0.9398" width="0" layer="51"/>
-<hole x="28.32095" y="26.11879375" drill="1.700021875"/>
 <circle x="27.55895" y="26.11879375" radius="0.9398" width="0" layer="51"/>
-<hole x="29.59095" y="23.919103125" drill="1.700021875"/>
 <circle x="28.82895" y="23.919103125" radius="0.9398" width="0" layer="51"/>
-<hole x="19.812" y="6.985025" drill="1.700021875"/>
 <circle x="19.05" y="6.985025" radius="0.9398" width="0" layer="51"/>
-<hole x="17.272" y="6.985025" drill="1.700021875"/>
 <circle x="16.51" y="6.985025" radius="0.9398" width="0" layer="51"/>
 <hole x="22.352" y="39.369925" drill="1.700021875"/>
 <circle x="21.59" y="39.369925" radius="0.9398" width="0" layer="51"/>
