@@ -1,1 +1,0 @@
-The xxxx_moonlight.bin is compatible with the existing AS7265x test kit in the ams webshop. The other .bin includes new or adapted commands, whose are not compatible with the current AS7265x test kits.  

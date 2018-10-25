@@ -1,0 +1,1 @@
+The SparkFun Spectral Triad as designed using the first generation ICs from AMS also called 'Moonlight'. This means the !INT and !RST-ADDR pins are swapped. It still works, but you need to load 'Moonlight' style firmware that takes this into account.
