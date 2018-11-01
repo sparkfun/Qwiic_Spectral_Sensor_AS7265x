@@ -20124,8 +20124,8 @@ to disconnect I2C pull-ups </text>
 <text x="149.352" y="97.282" size="1.778" layer="97">The AS7261 must be held in reset while programming flash</text>
 <text x="17.78" y="129.54" size="1.27" layer="97" rot="R90" align="center-left">Open JP4 to use an external bulb</text>
 <text x="58.42" y="90.17" size="1.778" layer="97" align="center">Serial</text>
-<text x="73.152" y="92.71" size="1.778" layer="97" align="center">JP1</text>
-<text x="88.9" y="92.71" size="1.778" layer="97" align="center">JP2</text>
+<text x="73.152" y="92.71" size="1.778" layer="97" align="center">'I2C'</text>
+<text x="88.9" y="92.71" size="1.778" layer="97" align="center">'JP2'</text>
 <text x="73.66" y="90.17" size="1.778" layer="97" align="center">Open</text>
 <text x="88.9" y="90.17" size="1.778" layer="97" align="center">Closed</text>
 <text x="88.9" y="87.63" size="1.778" layer="97" align="center">Open</text>
@@ -20153,6 +20153,7 @@ SIR19-21C/TR8</text>
 VLMU3100-GS08</text>
 <text x="56.896" y="31.242" size="1.778" layer="97" rot="R90">Power Indication</text>
 <text x="178.054" y="137.922" size="1.778" layer="97">AT25SF041</text>
+<text x="81.28" y="95.25" size="1.778" layer="97" align="center">Jumper</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
