@@ -13,7 +13,7 @@ Want to use this board using python? Checkout hwreverse [pySectralTriad](https:/
 
 **Thanks to:**
 
-* pySpectralTriad for the python application
+* **pySpectralTriad** for the python application
 
 Repository Contents
 -------------------
